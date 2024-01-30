@@ -1,0 +1,11 @@
+SELECT DISTINCT(CITY)
+FROM STATION
+WHERE CITY NOT IN 
+(SELECT DISTINCT(CITY)
+ FROM STATION
+ WHERE
+    CITY Like '%e' OR
+    CITY Like '%a' OR
+    CITY Like '%i' OR
+    CITY Like '%o' OR
+    CITY Like '%u');
